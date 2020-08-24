@@ -1,0 +1,27 @@
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  grid-row-gap: 20px;
+}
+
+.devicon {
+  font-size: 75px;
+}
+
+.devicon-google-plain {
+  font-size: 50px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.skills-p {
+  padding-top: 50px;
+}
+
+#waka {
+  padding-top: 20px;
+}
+/*# sourceMappingURL=additions.css.map */
