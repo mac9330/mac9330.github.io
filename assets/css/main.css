@@ -1660,25 +1660,4 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		.grid {
-			display: grid;
-			grid-template-columns: auto auto auto ;
-			grid-gap: 10px;
-			grid-row-gap: 20px;
-			
-		}
 
-		.devicon {
-			font-size: 75px;
-
-		}
-
-		.devicon-google-plain {
-			font-size: 50px;
-			padding-top: 10px;
-			padding-left: 15px;
-		}
-
-		.skills-p {
-			padding-top: 50px;
-		}
