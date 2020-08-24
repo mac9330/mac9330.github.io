@@ -413,6 +413,10 @@ jQuery;
   fetchWakaLanguages().then(function (res) {
     for (var i = 0; i < 3; i++) {
       langStr += languageTemplate(res.data[i].name, res.data[i].percent);
+
+      if (i < 2) {
+        langStr += ", ";
+      }
     }
 
     languageList.append(langStr);
@@ -420,5 +424,5 @@ jQuery;
 })();
 
 function languageTemplate(name, percent) {
-  return "".concat(name, " - <span style=\"font-size: small;\">").concat(percent, "%</span>, ");
+  return "".concat(name, " - <span style=\"font-size: small;\">").concat(percent, "%</span>");
 }

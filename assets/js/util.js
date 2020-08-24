@@ -638,6 +638,9 @@ function fetchWakaLanguages() {
 				res.data[i].name,
 				res.data[i].percent
 			);
+			if (i < 2) {
+				langStr += ", "
+			}
 		}
 		languageList.append(langStr)
 	})
@@ -646,7 +649,7 @@ function fetchWakaLanguages() {
 })()
 
 function languageTemplate(name, percent) {
-	return `${name} - <span style="font-size: small;">${percent}%</span>, `;
+	return `${name} - <span style="font-size: small;">${percent}%</span>`;
 }
 
 
