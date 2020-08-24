@@ -646,7 +646,7 @@ function fetchWakaLanguages() {
 })()
 
 function languageTemplate(name, percent) {
-	return `${name} - <span style="font-size: small;">${percent}%</span> `;
+	return `${name} - <span style="font-size: small;">${percent}%</span>, `;
 }
 
 

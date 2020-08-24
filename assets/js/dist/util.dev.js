@@ -420,5 +420,5 @@ jQuery;
 })();
 
 function languageTemplate(name, percent) {
-  return "".concat(name, " - <span style=\"font-size: small;\">").concat(percent, "%</span> ");
+  return "".concat(name, " - <span style=\"font-size: small;\">").concat(percent, "%</span>, ");
 }
