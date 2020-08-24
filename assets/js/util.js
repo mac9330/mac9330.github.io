@@ -585,3 +585,70 @@
 	};
 
 })(jQuery);
+
+
+function fetchWakaTime() {
+	return $.ajax({
+		type: 'GET',
+		url: 'https://wakatime.com/share/@cf6bf270-543e-4886-a3b9-3ca9d5bc4a49/1d28237c-d947-4acd-b712-24934183dd56.json',
+		dataType: 'jsonp',
+		// beforeSend: function () {
+		// 	$("#waka").html("Loading...");
+		// },
+		success: function (response) {
+			console.log(response.data);
+		},
+	})
+}(jQuery);
+
+function fetchWakaLanguages() {
+	return $.ajax({
+		type: 'GET',
+		url: 'https://wakatime.com/share/@cf6bf270-543e-4886-a3b9-3ca9d5bc4a49/686685d1-f47c-4720-a258-a628dd4c625d.json',
+		dataType: 'jsonp',
+		success: function (response) {
+			console.log(response.data);
+		},
+	});
+}(jQuery);
+
+
+
+
+(function getWaka() {
+	// fetchWaka().then(data => $('#waka').append(JSON.stringify(data)))
+	const stats = $("#stats");
+	const languageList = $("#languages")
+	const week = [];
+	let seconds = 0;
+	const languages = [];
+	let langStr = "";
+	fetchWakaTime().then(res => {
+		for (let i = 0; i < res.data.length; i++) {
+			week.push(res.data[i]);
+		}
+		for (let i = 0; i < week.length; i++) {
+			seconds += week[i].grand_total.total_seconds
+		}
+		stats.append(Math.floor(seconds / 3600))
+	})
+	fetchWakaLanguages().then(res => {
+		for (let i = 0; i < 3; i++) {
+			langStr += languageTemplate(
+				res.data[i].name,
+				res.data[i].percent
+			);
+		}
+		languageList.append(langStr)
+	})
+	
+		
+})()
+
+function languageTemplate(name, percent) {
+	return `${name} - <span style="font-size: small;">${percent}%</span> `;
+}
+
+
+
+
