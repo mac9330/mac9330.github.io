@@ -24,4 +24,29 @@
 #waka {
   padding-top: 20px;
 }
+
+.image.main {
+  width: 100%;
+  height: auto;
+}
+
+.image.main img {
+  width: 100%;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-col p {
+  width: 85%;
+  padding: 1em;
+  padding-top: 2.1em;
+}
 /*# sourceMappingURL=additions.css.map */

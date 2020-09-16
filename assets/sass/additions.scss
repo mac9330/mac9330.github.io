@@ -24,3 +24,23 @@
 		#waka {
 			padding-top: 20px
 		}
+
+		.image.main {
+			width: 100%;
+			height: auto;
+			img {
+				width: 100%;
+			}
+		}
+
+		.flex-col {
+			display: flex;
+			flex-direction: row;
+
+			p {
+				width: 85%;
+				padding: 1em;
+				padding-top: 2.1em;
+			}
+		}
+
