@@ -70,8 +70,13 @@
 										</span>
 									</a> 
 								</h3>
+								<script>
+									document.getElementsByClassName('myvideo').forEach(video => {
+										video.play();
+									});    
+								</script>
 								<p>SpareBnb is an AirBnB clone that allows users to book vactions, make reservations, and enjoy vactions.</p>
-									<video class="image main" width="320" height="240" autoplay="true" repeat loop controls>
+									<video id="myvideo" class="image main" width="320" height="240" autoplay="true" repeat loop>
 										<source src="/assets/media/SpareBnB_Search.mp4" type="video/mp4">
 									</video>
 								<a href="https://camp-mern-project.herokuapp.com/#/">
@@ -81,7 +86,7 @@
 								</a>
 								<p>A language learning platform that provides basic English lessons and facilitates the connection between
 									students teachers.</p>
-								<video class="image main" width="320" height="240" autoplay="true" repeat loop controls>
+								<video id="myvideo" class="image main" width="320" height="240" autoplay="true" repeat loop>
 									<source src="/assets/media/Camp_Homepage.mp4" type="video/mp4">
 								</video>
 								<a href="https://mac9330.github.io/JS_CSS_Animated_Styles/">
@@ -90,7 +95,7 @@
 									</h3>
 								</a>
 								<p>A single-page vanilla JavaScript website that provides a visual demonstration of interactive CSS animations.</p>
-								<video class="image main" width="320" height="240" autoplay="true" repeat loop controls>
+								<video id="myvideo" class="image main" width="320" height="240" autoplay="true" repeat loop>
 									<source src="/assets/media/CSS_JS.mp4" type="video/mp4">
 								</video>
 
@@ -98,7 +103,7 @@
 									<h3>Kantan Board<a href="https://github.com/mac9330/Kantan"> <span class="poject-readme">(ReadMe)</span></a></h3> 
 								</a>
 								<p>Kantan Board created for the Mintbean 08/23/20 Hackathon for recent bootcamp grads. This application is a Trello-like to-do board created in just a few days as a competitive Hackathon project.</p>
-								<video class="image main" width="320" height="240" autoplay="true" repeat loop controls>
+								<video id="myvideo" class="image main" width="320" height="240" autoplay="true" repeat loop>
 									<source src="/assets/media/Kantan.mp4" type="video/mp4">
 								</video>
 							</article>
