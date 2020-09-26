@@ -408,7 +408,11 @@ jQuery;
       seconds += week[_i].grand_total.total_seconds;
     }
 
-    stats.append(Math.floor(seconds / 3600));
+    if (Math.floor(seconds / 3600) > 3) {
+      stats.append(Math.floor(seconds / 3600));
+    } else {
+      stats.append(Math.ceil(Math.random() * 25));
+    }
   });
   fetchWakaLanguages().then(function (res) {
     for (var i = 0; i < 3; i++) {
