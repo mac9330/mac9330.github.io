@@ -647,7 +647,12 @@ function fetchWakaLanguages() {
 				langStr += ", "
 			}
 		}
-		languageList.append(langStr)
+		if (langStr.length > 0) {
+			languageList.append(langStr)
+		}
+		else {
+			languageList.append("JSX, JavaScript, Ruby")
+		}
 	})
 
 
