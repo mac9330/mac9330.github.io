@@ -408,10 +408,10 @@ jQuery;
       seconds += week[_i].grand_total.total_seconds;
     }
 
-    if (Math.floor(seconds / 3600) > 3) {
+    if (Math.floor(seconds / 3600) !== 0) {
       stats.append(Math.floor(seconds / 3600));
     } else {
-      stats.append(Math.ceil(Math.random() * 25));
+      $("#waka").css("display", "none");
     }
   });
   fetchWakaLanguages().then(function (res) {
@@ -423,11 +423,7 @@ jQuery;
       }
     }
 
-    if (langStr.length > 0) {
-      languageList.append(langStr);
-    } else {
-      languageList.append("JSX, JavaScript, Ruby");
-    }
+    languageList.append(langStr);
   });
 })();
 

@@ -630,11 +630,10 @@ function fetchWakaLanguages() {
 		for (let i = 0; i < week.length; i++) {
 			seconds += week[i].grand_total.total_seconds
 		}
-		if (Math.floor(seconds / 3600) > 3) {
+		if (Math.floor(seconds / 3600) !== 0) {
 			stats.append(Math.floor(seconds / 3600))
-		} 
-		else {
-			stats.append(Math.ceil(Math.random() * 25))
+		} else {
+			$("#waka").css("display", "none")
 		}
 	})
 	fetchWakaLanguages().then(res => {
@@ -647,12 +646,7 @@ function fetchWakaLanguages() {
 				langStr += ", "
 			}
 		}
-		if (langStr.length > 0) {
-			languageList.append(langStr)
-		}
-		else {
-			languageList.append("JSX, JavaScript, Ruby")
-		}
+		languageList.append(langStr)
 	})
 
 
